@@ -25,6 +25,45 @@ USE Biblioteca_Tarde;
 	SELECT * FROM Autores;
 	SELECT * FROM Livro;
 
+	INSERT INTO Autores(NomeAutor)
+	VALUES ('Jonh Week'),('Alice Marqs'),('Angelica Gues'),('Fernando Pessoa'),('Jorge Amado');
+
+	INSERT INTO Generos(Nome)
+	VALUES ('Suspense'),('Comedia'),('Romance'),('Terror'),('Aventura');
+
+	INSERT INTO Livro(Titulo,IdAutor,IdGenero)
+	VALUES ('A Casa do Terror',1,4)
+
+	INSERT INTO Livro(Titulo,IdAutor,IdGenero)
+	VALUES ('Cronicas de um Babaca',2,2)
+
+    INSERT INTO Livro(Titulo,IdAutor,IdGenero)
+	VALUES ('Floresta Clara',3,1)
+	
+	INSERT INTO Livro(Titulo,IdAutor,IdGenero)
+	VALUES ('Paixao Perdida',4,3)
+
+	INSERT INTO Livro(Titulo,IdAutor,IdGenero)
+	VALUES ('Capitaes da Areia',5,5)
+
+	
+	UPDATE Generos
+	SET Nome = 'Comedia Romantica'
+	WHERE IdGenero = 3;
+
+	UPDATE Livro
+	SET IdGenero = 1
+	WHERE IdLivro = 1;
+
+	DELETE FROM Livro
+    WHERE IdLivro = 1;
+
+	DELETE FROM Autores
+	WHERE IdAutor = 1;
+
+
+
+
 	--ALTERAR ADICIONAR UMA NOVA COLUNA
 	ALTER TABLE Generos
 	ADD Descricao VARCHAR(255)
